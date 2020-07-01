@@ -1,26 +1,16 @@
-
-# assignment04
+# assignment04 - Building R Packages
 
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.com/adbjesus/assignment04.svg?branch=master)](https://travis-ci.com/adbjesus/assignment04)
 <!-- badges: end -->
 
-The goal of assignment04 is to ...
+This repository contains the code for assignment of week 4 for the
+course "Building R Packages".
 
 ## Installation
 
-You can install the released version of assignment04 from [CRAN](https://CRAN.R-project.org) with:
+You can install from git with devtools:
 
 ``` r
-install.packages("assignment04")
+devtools::install_github("adbjesus/assignment04")
 ```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(assignment04)
-## basic example code
-```
-
