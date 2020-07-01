@@ -1,0 +1,38 @@
+---
+title: "Plotting fars occurences"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{plotting_fars_occurences}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(assignment04)
+```
+
+This vignette shows how to plot a map for FARS occurrences using the
+`fars_map_state` function.
+
+The first thing we need to do is to change the working directory to
+where the FARS data files are.
+
+```{r}
+setwd(system.file("inst", package = "assignment04"))
+```
+
+Then, we simply need to call the `fars_map_state` function with the
+state and year we are interested in plotting.
+
+```{r}
+fars_map_state(1, 2013)
+```
+
+And there we have it.
