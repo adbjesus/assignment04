@@ -17,6 +17,8 @@
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df
 #'
+#' @export
+#'
 #' @md
 fars_read <- function(filename) {
         if(!file.exists(filename))
@@ -44,6 +46,8 @@ fars_read <- function(filename) {
 #' make_filename(2020)
 #' make_filename(2020.10) # Note how the year is converted to an integer
 #'
+#' @export
+#'
 #' @md
 make_filename <- function(year) {
         year <- as.integer(year)
@@ -66,12 +70,14 @@ make_filename <- function(year) {
 #'     data can not be read that year is ignored and a warning is
 #'     issued, but all other data is still read.
 #'
-#' @seealso [make_filename(year)], [fars_read(filename)]
+#' @seealso [make_filename], [fars_read]
 #'
 #' @examples
 #' \dontrun{fars_read_years(c(2013,2014,2015))}
 #'
 #' @importFrom dplyr mutate select
+#'
+#' @export
 #'
 #' @md
 fars_read_years <- function(years) {
@@ -101,13 +107,15 @@ fars_read_years <- function(years) {
 #'
 #' @note Years whose data file cannot be bound are ignored.
 #'
-#' @seealso [fars_read_years(years)]
+#' @seealso [fars_read_years]
 #'
 #' @examples
 #' \dontrun{fars_summarize_years(c(2013,2014,2015))}
 #'
 #' @importFrom dplyr bind_rows group_by summarize
 #' @importFrom tidyr spread
+#'
+#' @export
 #'
 #' @md
 fars_summarize_years <- function(years) {
@@ -137,6 +145,8 @@ fars_summarize_years <- function(years) {
 #' @importFrom dplyr filter
 #' @importFrom maps map
 #' @importFrom graphics points
+#'
+#' @export
 #'
 #' @md
 fars_map_state <- function(state.num, year) {

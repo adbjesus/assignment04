@@ -21,11 +21,12 @@ library(assignment04)
 This vignette shows how to plot a map for FARS occurrences using the
 `fars_map_state` function.
 
-The first thing we need to do is to change the working directory to
-where the FARS data files are.
+The first thing we need to do is make sure that our current working
+directory has FARS data files named `accident_{year}.csv.bz2`, where
+`{year}` is a 4 digit number, e.g. `2013`.
 
 ```{r}
-setwd(system.file("inst", package = "assignment04"))
+list.files(pattern = "accident_*.csv.bz2", recursive = FALSE)
 ```
 
 Then, we simply need to call the `fars_map_state` function with the
